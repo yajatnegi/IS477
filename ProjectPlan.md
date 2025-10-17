@@ -1,18 +1,15 @@
 # Project Plan (Milestone 2)
 
----
 
 ## Overview
 The goal of this project is to analyze the relationship between median household income and median home values across U.S. counties.  
 Using data from the Zillow Home Value Index (ZHVI) and the USDA Economic Research Service (ERS), we aim to determine whether counties with higher income levels also have higher home prices.  
 
----
 
 ## Research Questions
 1. Do U.S. counties with higher median household incomes have higher median home values?  
 2. How strong is the correlation between income and home prices across counties?  
 
----
 
 ## Team
 
@@ -21,7 +18,6 @@ Using data from the Zillow Home Value Index (ZHVI) and the USDA Economic Researc
 
 Both members will contribute to the project equally. 
 
----
 
 ## Datasets
 
@@ -50,7 +46,6 @@ For Milestone 4 (Final Project Submission), we will complete our analysis, produ
 - Zillow data is monthly while income data is annual meaning it requires aggregation.  
 - Missing data may occur in small or rural counties.  
 
----
 
 ## Gaps 
 - Still finalizing the specific analysis methods and metrics to use  
