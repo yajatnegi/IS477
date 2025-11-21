@@ -1,3 +1,4 @@
+'''
 import pandas as pd
 
 def clean_zhvi(input_path="data/raw/ZHVI.csv", output_path="data/cleaned/ZHVI_cleaned.csv"):
@@ -41,4 +42,4 @@ def clean_zhvi(input_path="data/raw/ZHVI.csv", output_path="data/cleaned/ZHVI_cl
 
 if __name__ == "__main__":
     clean_zhvi()
-
+'''

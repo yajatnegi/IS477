@@ -1,3 +1,4 @@
+'''
 import pandas as pd
 
 def clean_income(input_path="data/raw/ERS_income.csv", output_path="data/cleaned/Income_cleaned.csv"):
@@ -43,4 +44,4 @@ def clean_income(input_path="data/raw/ERS_income.csv", output_path="data/cleaned
 
 if __name__ == "__main__":
     clean_income()
-
+'''
