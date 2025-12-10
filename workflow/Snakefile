@@ -1,0 +1,32 @@
+# Placeholder Snakefile for Milestone 3# workflow/Snakefile
+
+RAW_ZILLOW = "data/raw/zillow_zhvi_county.csv"
+RAW_USDA = "data/raw/usda_median_income_county.csv"
+
+rule all:
+    input:
+        "data/processed/county_housing_income_2022.csv",
+        "data/processed/summary_stats_2022.csv",
+        "data/processed/correlation_2022.txt",
+        "figures/income_vs_zhvi_scatter.png",
+        "figures/income_vs_log_zhvi_scatter.png"
+
+rule prepare_data:
+    input:
+        RAW_ZILLOW,
+        RAW_USDA
+    output:
+        "data/processed/county_housing_income_2022.csv"
+    shell:
+        "python scripts/prepare_data.py"
+
+rule analyze_data:
+    input:
+        "data/processed/county_housing_income_2022.csv"
+    output:
+        "data/processed/summary_stats_2022.csv",
+        "data/processed/correlation_2022.txt",
+        "figures/income_vs_zhvi_scatter.png",
+        "figures/income_vs_log_zhvi_scatter.png"
+    shell:
+        "python scripts/analyze_data.py"
