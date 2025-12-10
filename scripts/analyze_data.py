@@ -21,7 +21,6 @@ def main():
     print("\nPearson correlation between ZHVI_2022 and Median_Income_2022:")
     print(corr)
 
-    # Save summary + correlation to CSV / TXT for reproducibility
     summary.to_csv(PROCESSED_DIR / "summary_stats_2022.csv")
     with open(PROCESSED_DIR / "correlation_2022.txt", "w") as f:
         f.write(f"Pearson correlation: {corr:.4f}\n")
@@ -31,7 +30,6 @@ def main():
         f.write(f"ZHVI_2022 ≈ {intercept:.2f} + {slope:.4f} * Median_Income_2022\n")
 
 
-    # Scatter plot (log-scale on ZHVI to reduce skew)
     plt.figure()
     plt.scatter(df["Median_Income_2022"], df["ZHVI_2022"], alpha=0.3)
     plt.xlabel("Median Household Income, 2022 (USD)")
@@ -40,7 +38,6 @@ def main():
     plt.tight_layout()
     plt.savefig(FIG_DIR / "income_vs_zhvi_scatter.png", dpi=200)
 
-    # Optionally log transform ZHVI for a cleaner plot
     plt.figure()
     plt.scatter(df["Median_Income_2022"], np.log(df["ZHVI_2022"]), alpha=0.3)
     plt.xlabel("Median Household Income, 2022 (USD)")
